@@ -2,20 +2,19 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 const Filler = () => {
-    return (
-        <View style={styles.fillerStyles}>
-            <Text>Will be implemented</Text>
-        </View>
-
-    );
+  return (
+    <View style={styles.fillerStyles}>
+      <Text>Will be Implemented</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-    fillerStyles: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    },
+  fillerStyles: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export default Filler;
