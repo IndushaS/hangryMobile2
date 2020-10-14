@@ -19,12 +19,12 @@ const RestaurantMenu = () => {
         <SpecialCard
           backgroundImage={require("../../assets/images/deserts.jpeg")}
         />
-        {/* <RegularCard 
-                        image = {require("../../assets/images/deserts.jpeg")}
-                        title = "French Madelaines"
-                        description = "Our beautifully crafted madeleines are baked fresh daily, and coated with... strawberry crema, ready to die for."
-                        price = "9.99"
-                    /> */}
+        <RegularCard
+          image={require("../../assets/images/deserts.jpeg")}
+          title='French Madelaines'
+          description='Our beautifully crafted madeleines are baked fresh daily, and coated with... strawberry crema, ready to die for.'
+          price='9.99'
+        />
         <RegularCard
           image={require("../../assets/images/deserts.jpeg")}
           title='French Madelaines'

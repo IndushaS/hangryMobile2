@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import 'react-native-gesture-handler';
+import React, { useState } from "react";
+import "react-native-gesture-handler";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
 
@@ -11,9 +11,11 @@ import NavigationController from "./navigation/NavigationController";
 
 //Reducer Imports Here
 import authReducer from "./store/reducers/auth";
+import menu from "./store/reducers/menuReducer";
 
 const rootReducer = combineReducers({
   authReducer,
+  menu,
 });
 
 const store = createStore(rootReducer);
@@ -27,11 +29,15 @@ const fetchFonts = () => {
 };
 
 export default function App() {
-
   const [fontLoaded, setFontLoaded] = useState(false);
 
   if (!fontLoaded) {
-    return <AppLoading startAsync={fetchFonts} onFinish={() => setFontLoaded(true)} />
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setFontLoaded(true)}
+      />
+    );
   }
 
   return (
@@ -44,8 +50,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
