@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import PropTypes from "prop-types";
-import fetchData from "../../fetchMenu";
+import fetchMenuAction from "../../fetchMenu";
 import {
   getMenuError,
   getMenu,
@@ -130,7 +130,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
-      fetchMenu: fetchData,
+      fetchMenu: fetchMenuAction,
     },
     dispatch
   );
