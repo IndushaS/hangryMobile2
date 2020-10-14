@@ -51,29 +51,27 @@ class SubMenu extends Component {
     const { data, error, pending, navigation } = this.props;
 
     return (
-      <div>
-        <View>
-          <View style={styles.banner}>
-            <ImageBackground
-              source={require("../../assets/images/deserts.jpeg")}
-              style={styles.menuBg}
-            >
-              <View style={styles.overlay} />
-              <View>
-                <HeaderText style={{ color: "#fff" }}>Dessert</HeaderText>
-              </View>
-            </ImageBackground>
-          </View>
-          <View style={styles.subMenu}>
-            <RegularCard
-              onPress={() => navigation.navigate("Menu")}
-              image={require("../../assets/images/Mae.jpeg")}
-              title={data}
-              description={data}
-            />
-          </View>
+      <View>
+        <View style={styles.banner}>
+          <ImageBackground
+            source={require("../../assets/images/deserts.jpeg")}
+            style={styles.menuBg}
+          >
+            <View style={styles.overlay} />
+            <View>
+              <HeaderText style={{ color: "#fff" }}>Dessert</HeaderText>
+            </View>
+          </ImageBackground>
         </View>
-      </div>
+        <View style={styles.subMenu}>
+          <RegularCard
+            onPress={() => navigation.navigate("Menu")}
+            image={require("../../assets/images/Mae.jpeg")}
+            title={data}
+            description={data}
+          />
+        </View>
+      </View>
     );
   }
 }

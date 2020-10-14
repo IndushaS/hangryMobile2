@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "react-native-gesture-handler";
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { StyleSheet } from "react-native";
 import { AppLoading } from "expo";
@@ -13,12 +13,13 @@ import NavigationController from "./navigation/NavigationController";
 import authReducer from "./store/reducers/auth";
 import menu from "./store/reducers/menuReducer";
 
+const thunkMiddleware = require("redux-thunk").default;
+
 const rootReducer = combineReducers({
-  authReducer,
   menu,
 });
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 const fetchFonts = () => {
   return Font.loadAsync({
