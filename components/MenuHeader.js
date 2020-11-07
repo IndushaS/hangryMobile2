@@ -36,7 +36,7 @@ const MenuHeader = ({ navigation }) => {
                                 </TouchableWithoutFeedback>
                                 <TouchableOpacity>
                                     <View style={styles.followElemContainer}>
-                                        <AntDesign name="instagram" size={35} color="white" />
+                                    <AntDesign name="instagram" size={32} color="white" />
                                     </View>
                                 </TouchableOpacity>
                             </View>
@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
     },
     followElemContainer: { 
         flexDirection: "row", 
-        paddingTop: 0,
         justifyContent: "space-between" 
     },
 });

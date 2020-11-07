@@ -8,8 +8,8 @@ const CardNoImage = ({ title, description, price }) => {
             <View style={styles.menuCard}>
                 <View style={styles.menuText}>
                     <DefaultText style={styles.title}>{title}</DefaultText>
-                    <SmallText>{description}</SmallText>
-                    <DefaultText>{ price ? `$${price}` : "" }</DefaultText>
+                    <SmallText style={styles.desc}>{description}</SmallText>
+                    <DefaultText style={styles.price}>{ price ? `$${price}` : "" }</DefaultText>
                 </View>
             </View>
         </TouchableOpacity>
@@ -18,7 +18,7 @@ const CardNoImage = ({ title, description, price }) => {
 
 const styles = StyleSheet.create({
     menuCard: {
-        marginVertical: 10,
+        marginVertical: 12,
         height: 150,
         width: "100%",
         flexDirection: "row",
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 0.8,
+        shadowOpacity: 0.2,
         shadowRadius: 8,
     },
     menuText: {
@@ -37,8 +37,14 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
     },
     title: {
+        fontSize: 18,
         paddingBottom: 10,
         color: '#000'
+    },
+    desc: {
+        color: '#808080'
+    },
+    price: {
     }
 });
 

@@ -11,7 +11,7 @@ const RegularCard = ({ onPress, image, title, description, price }) => {
                 </View>
                 <View style={styles.menuText}>
                     <DefaultText style={styles.title}>{title}</DefaultText>
-                    <SmallText>{description}</SmallText>
+                    <SmallText style={styles.desc}>{description}</SmallText>
                     <DefaultText>{ price ? `$${price}` : "" }</DefaultText>
                 </View>
             </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 0.8,
+        shadowOpacity: 0.2,
         shadowRadius: 8,
     },
     menuText: {
@@ -40,8 +40,12 @@ const styles = StyleSheet.create({
         justifyContent: "space-around"
     },
     title: {
+        fontSize: 18,
         paddingBottom: 10,
         color: '#000'
+    },
+    desc: {
+        color: '#808080'
     }
 });
 
